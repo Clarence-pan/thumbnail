@@ -15,7 +15,8 @@ $srcImages = [
 
 $outputDir = __DIR__ . '/output';
 
-\clarence\thumbnail\Thumbnail::createFromImages($srcImages, 240, 320)->writeImage($outputDir."/example.jpg");
+$thumbnail = \clarence\thumbnail\Thumbnail::createFromImages($srcImages, 240, 320);
+$thumbnail->writeImage($outputDir."/example.jpg");
 
 echo "Done!";
 
