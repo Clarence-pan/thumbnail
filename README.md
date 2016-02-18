@@ -41,19 +41,19 @@ Really pretty simple codes:
 
 # Other thumbnail types 其他缩略图类型 
 
-1 image: ![](https://github.com/Clarence-pan/thumbnail/blob/master/test/output/1-Thumbnail.jpg?raw=true)
+![](https://github.com/Clarence-pan/thumbnail/blob/master/test/output/1-Thumbnail.jpg?raw=true) (1 image)
 
-2 images: ![](https://github.com/Clarence-pan/thumbnail/blob/master/test/output/2-Thumbnail.jpg?raw=true)
+![](https://github.com/Clarence-pan/thumbnail/blob/master/test/output/2-Thumbnail.jpg?raw=true) (2 images)
 
-3 images: ![](https://github.com/Clarence-pan/thumbnail/blob/master/test/output/3-Thumbnail.jpg?raw=true)
+![](https://github.com/Clarence-pan/thumbnail/blob/master/test/output/3-Thumbnail.jpg?raw=true) (3 images)
 
-4 images: ![](https://github.com/Clarence-pan/thumbnail/blob/master/test/output/4-Thumbnail.jpg?raw=true)
+![](https://github.com/Clarence-pan/thumbnail/blob/master/test/output/4-Thumbnail.jpg?raw=true) (4 images)
 
-CropThumbnail: ![](https://github.com/Clarence-pan/thumbnail/blob/master/test/output/4-CropThumbnail.jpg?raw=true)
+![](https://github.com/Clarence-pan/thumbnail/blob/master/test/output/4-CropThumbnail.jpg?raw=true) (CropThumbnail)
 
-ScaleThumbnail: ![](https://github.com/Clarence-pan/thumbnail/blob/master/test/output/4-ScaleThumbnail.jpg?raw=true)
+![](https://github.com/Clarence-pan/thumbnail/blob/master/test/output/4-ScaleThumbnail.jpg?raw=true) (ScaleThumbnail)
 
-EqualScaleTopLeftThumbnail: ![](https://github.com/Clarence-pan/thumbnail/blob/master/test/output/4-EqualScaleTopLeftThumbnail.jpg?raw=true)
+![](https://github.com/Clarence-pan/thumbnail/blob/master/test/output/4-EqualScaleTopLeftThumbnail.jpg?raw=true) (EqualScaleTopLeftThumbnail)
 
-EqualScaleCenterThumbnail: ![](https://github.com/Clarence-pan/thumbnail/blob/master/test/output/4-EqualScaleCenterThumbnail.jpg?raw=true)
+![](https://github.com/Clarence-pan/thumbnail/blob/master/test/output/4-EqualScaleCenterThumbnail.jpg?raw=true) (EqualScaleCenterThumbnail)
 
