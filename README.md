@@ -1,5 +1,6 @@
 # thumbnail 缩略图
 A library for make multi images' thumbnail in PHP
+
 用PHP写的一个生成多张图片的组合缩略图
 
 # Examples 示例
