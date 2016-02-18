@@ -13,11 +13,11 @@ $srcImages = [
 $outputDir = __DIR__ . '/output';
 
 $thumbnailTypes = [
-    \thumbnail\CropThumbnail::class,
-    \thumbnail\Thumbnail::class,
-    \thumbnail\ScaleThumbnail::class,
-    \thumbnail\EqualScaleCenterThumbnail::class,
-    \thumbnail\EqualScaleTopLeftThumbnail::class,
+    \clarence\thumbnail\CropThumbnail::class,
+    \clarence\thumbnail\Thumbnail::class,
+    \clarence\thumbnail\ScaleThumbnail::class,
+    \clarence\thumbnail\EqualScaleCenterThumbnail::class,
+    \clarence\thumbnail\EqualScaleTopLeftThumbnail::class,
 ];
 
 try{

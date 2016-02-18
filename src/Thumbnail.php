@@ -1,6 +1,6 @@
 <?php
 
-namespace thumbnail;
+namespace clarence\thumbnail;
 
 class Thumbnail extends \Imagick
 {
