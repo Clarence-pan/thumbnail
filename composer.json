@@ -2,6 +2,7 @@
 	"name": "clarence/thumbnail",
 	"type": "library",
 	"description": "A library for making thumbnails, especially for composed images' thumbnail",
+	"license": "MIT",
 	"authors": [
 		{
 			"name": "Clarence Pan",

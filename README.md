@@ -1,13 +1,23 @@
-# thumbnail ËõÂÔÍ¼
+# thumbnail ç¼©ç•¥å›¾
 A library for make multi images' thumbnail in PHP
 
-ÓÃPHPĞ´µÄÒ»¸öÉú³É¶àÕÅÍ¼Æ¬µÄ×éºÏËõÂÔÍ¼
+ç”¨PHPå†™çš„ä¸€ä¸ªç”Ÿæˆå¤šå¼ å›¾ç‰‡çš„ç»„åˆç¼©ç•¥å›¾
 
-# Examples Ê¾Àı
+# Install å®‰è£…
+
+Except downloading the source code from [github](https://github.com/clarence-pan/thumbnail), it is recommended to install via composer:
+
+é™¤äº†ä» [github](https://github.com/clarence-pan/thumbnail) ä¸Šä¸‹è½½æºç å¤–ï¼Œæ¨èä½¿ç”¨composerå®‰è£…ï¼š
+
+```sh
+composer require clarence/thumbnail
+```
+
+# Examples ç¤ºä¾‹
 
 Composite the following 4 images into a thumbnail:
 
-½«ÒÔÏÂËÄÕÅÍ¼×éºÏÆğÀ´Éú³ÉÒ»ÕÅËõÂÔÍ¼£º
+å°†ä»¥ä¸‹å››å¼ å›¾ç»„åˆèµ·æ¥ç”Ÿæˆä¸€å¼ ç¼©ç•¥å›¾ï¼š
 
 1. ![](https://github.com/Clarence-pan/thumbnail/blob/master/test/img/1.jpg?raw=true)
 2. ![](https://github.com/Clarence-pan/thumbnail/blob/master/test/img/2.jpg?raw=true)
@@ -16,13 +26,13 @@ Composite the following 4 images into a thumbnail:
 
 Let's see the result firstly:
 
-ÏÈ¿´Ğ§¹û£º
+å…ˆçœ‹æ•ˆæœï¼š
 
 ![](https://github.com/Clarence-pan/thumbnail/blob/master/test/output/example.jpg?raw=true)
 
 Then, the example codes:
 
-ÔÙ¿´´úÂë£º
+å†çœ‹ä»£ç ï¼š
 
 ```php
 // file: test/example.php
@@ -33,14 +43,14 @@ $thumbnail->writeImage($outputDir."/example.jpg");
 
 Really pretty simple codes:
 
-Ê®·Ö¼òµ¥µÄ´úÂë~
+ååˆ†ç®€å•çš„ä»£ç ~
 
 `Thumbnail::createFromImages` is ussed to create the composited thumbnail. The first parameter is an array of original images' pathes; The second parameter is the thumbnail's width; The third parameter is the thumbnail's height; Then the image created is an instance of `Imagick` - so `writeImage` can be used to save it to a file.
 
-`Thumbnail::createFromImages` ¾ÍÊÇÓÃÓÚÉú³ÉËõÂÔÍ¼µÄ¹Ø¼üº¯Êı£¬ÆäµÚÒ»¸ö²ÎÊıÊÇÔ­Ê¼Í¼Æ¬µÄÎÄ¼şÂ·¾¶ÁĞ±í£¬µÚ¶ş¸ö²ÎÊıÊÇÉú³ÉµÄËõÂÔÍ¼µÄ¿í¶È£¬µÚÈı¸ö²ÎÊıÊÇÉú³ÉµÄËõÂÔÍ¼µÄ¸ß¶È£»Éú³ÉµÄÍ¼Æ¬ÊÇÒ»¸ö`Imagick`¶ÔÏó£¬È»ºó¿ÉÒÔÊ¹ÓÃ`writeImage`½«Æä±£´æµ½ÎÄ¼ş¡£
+`Thumbnail::createFromImages` å°±æ˜¯ç”¨äºç”Ÿæˆç¼©ç•¥å›¾çš„å…³é”®å‡½æ•°ï¼Œå…¶ç¬¬ä¸€ä¸ªå‚æ•°æ˜¯åŸå§‹å›¾ç‰‡çš„æ–‡ä»¶è·¯å¾„åˆ—è¡¨ï¼Œç¬¬äºŒä¸ªå‚æ•°æ˜¯ç”Ÿæˆçš„ç¼©ç•¥å›¾çš„å®½åº¦ï¼Œç¬¬ä¸‰ä¸ªå‚æ•°æ˜¯ç”Ÿæˆçš„ç¼©ç•¥å›¾çš„é«˜åº¦ï¼›ç”Ÿæˆçš„å›¾ç‰‡æ˜¯ä¸€ä¸ª`Imagick`å¯¹è±¡ï¼Œç„¶åå¯ä»¥ä½¿ç”¨`writeImage`å°†å…¶ä¿å­˜åˆ°æ–‡ä»¶ã€‚
 
 
-# Other thumbnail types ÆäËûËõÂÔÍ¼ÀàĞÍ 
+# Other thumbnail types å…¶ä»–ç¼©ç•¥å›¾ç±»å‹ 
 
 ![](https://github.com/Clarence-pan/thumbnail/blob/master/test/output/1-Thumbnail.jpg?raw=true) (1 image)
 
