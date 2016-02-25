@@ -13,11 +13,11 @@ $srcImages = [
 $outputDir = __DIR__ . '/output';
 
 $thumbnailTypes = [
-    \clarence\thumbnail\CropThumbnail::class,
-    \clarence\thumbnail\Thumbnail::class,
-    \clarence\thumbnail\ScaleThumbnail::class,
-    \clarence\thumbnail\EqualScaleCenterThumbnail::class,
-    \clarence\thumbnail\EqualScaleTopLeftThumbnail::class,
+    \Clarence\Thumbnail\CropThumbnail::class,
+    \Clarence\Thumbnail\Thumbnail::class,
+    \Clarence\Thumbnail\ScaleThumbnail::class,
+    \Clarence\Thumbnail\EqualScaleCenterThumbnail::class,
+    \Clarence\Thumbnail\EqualScaleTopLeftThumbnail::class,
 ];
 
 try{
@@ -26,7 +26,6 @@ try{
             $thumbnailBaseType = preg_replace('/^.*nail\\\\/', '', $thumbnailType);
             echo "[$thumbnailBaseType] Merging $i images... ", PHP_EOL;
 
-            // 生成缩略图并写入文件
             $thumbnail = call_user_func(array($thumbnailType, 'createFromImages'), array_slice($srcImages, 0, $i), 240, 320);
             $thumbnail->writeImage($outputDir."/{$i}-{$thumbnailBaseType}.jpg");
         }

@@ -1,0 +1,22 @@
+{
+	"name": "clarence/thumbnail",
+	"type": "library",
+	"description": "A library for making thumbnails, especially for composed images' thumbnail",
+	"authors": [
+		{
+			"name": "Clarence Pan",
+			"email": "clarence-pan@foxmail.com",
+			"homepage": "https://clarence-pan.github.io",
+			"role": "developer"
+		}
+	],
+	"require": {
+		"php": ">5.3.0",
+		"ext-imagick": "*"
+	},
+	"autoload": {
+      "psr-4": {
+          "Clarence\\Thumbnail\\": "src"
+      }
+	}
+}
