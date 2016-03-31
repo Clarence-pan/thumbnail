@@ -8,24 +8,25 @@ class Thumbnail extends \Imagick
      * @param array $images
      * @param int $width
      * @param int $height
+     * @param int $delimiter 分隔符
      * @return static
      * @throws ThumbnailException
      */
-    public static function createFromImages($images, $width, $height){
+    public static function createFromImages($images, $width, $height, $delimiter = 1){
         if (empty($images)){
             throw new ThumbnailException("No images!");
         }
 
         $thumbnail = new static();
         $thumbnail->newImage($width, $height, 'white', 'jpg');
-        $thumbnail->compositeImages($images);
+        $thumbnail->compositeImages($images, $delimiter);
 
         return $thumbnail;
     }
 
-    public function compositeImages($images){
+    public function compositeImages($images, $delimiter = 1){
         $imagesKeys = array_keys($images);
-        $compositeConfig = $this->calcCompositeImagesPosAndSize($images);
+        $compositeConfig = $this->calcCompositeImagesPosAndSize($images, $delimiter);
 
         foreach ($compositeConfig as $index => $cfg){
             $imgKey = $imagesKeys[$index];
@@ -40,7 +41,7 @@ class Thumbnail extends \Imagick
         return $img;
     }
 
-    protected function calcCompositeImagesPosAndSize($images){
+    protected function calcCompositeImagesPosAndSize($images, $delimiter = 1){
         $width = $this->getImageWidth();
         $height = $this->getImageHeight();
 
@@ -64,14 +65,14 @@ class Thumbnail extends \Imagick
                     0 => [
                         'to' => [ 'x' => 0, 'y' => 0 ],
                         'size' => [
-                            'width' => $width / 2,
+                            'width' => $width / 2 - $delimiter,
                             'height' => $height,
                         ]
                     ],
                     1 => [
-                        'to' => [ 'x' => $width / 2, 'y' => 0],
+                        'to' => [ 'x' => $width / 2 + $delimiter, 'y' => 0],
                         'size' => [
-                            'width' => $width / 2,
+                            'width' => $width / 2 - $delimiter,
                             'height' => $height,
                         ]
                     ]
@@ -83,22 +84,22 @@ class Thumbnail extends \Imagick
                     0 => [
                         'to' => [ 'x' => 0, 'y' => 0 ],
                         'size' => [
-                            'width' => $width / 2,
-                            'height' => $height / 2,
+                            'width' => $width / 2 - $delimiter,
+                            'height' => $height / 2 - $delimiter,
                         ]
                     ],
                     1 => [
-                        'to' => [ 'x' => $width / 2, 'y' => 0],
+                        'to' => [ 'x' => $width / 2 + $delimiter, 'y' => 0],
                         'size' => [
-                            'width' => $width / 2,
+                            'width' => $width / 2 - $delimiter,
                             'height' => $height,
                         ]
                     ],
                     2 => [
-                        'to' => [ 'x' => 0, 'y' => $height / 2 ],
+                        'to' => [ 'x' => 0, 'y' => $height / 2 + $delimiter ],
                         'size' => [
-                            'width' => $width / 2,
-                            'height' => $height / 2,
+                            'width' => $width / 2 - $delimiter,
+                            'height' => $height / 2 - $delimiter,
                         ]
                     ],
                 ];
@@ -110,29 +111,29 @@ class Thumbnail extends \Imagick
                     0 => [
                         'to' => [ 'x' => 0, 'y' => 0 ],
                         'size' => [
-                            'width' => $width / 2,
-                            'height' => $height / 2,
+                            'width' => $width / 2 - $delimiter,
+                            'height' => $height / 2 - $delimiter,
                         ]
                     ],
                     1 => [
-                        'to' => [ 'x' => $width / 2, 'y' => 0],
+                        'to' => [ 'x' => $width / 2 + $delimiter, 'y' => 0],
                         'size' => [
-                            'width' => $width / 2,
-                            'height' => $height / 2,
+                            'width' => $width / 2 - $delimiter,
+                            'height' => $height / 2 - $delimiter,
                         ]
                     ],
                     2 => [
-                        'to' => [ 'x' => 0, 'y' => $height / 2 ],
+                        'to' => [ 'x' => 0, 'y' => $height / 2 + $delimiter ],
                         'size' => [
-                            'width' => $width / 2,
-                            'height' => $height / 2,
+                            'width' => $width / 2 - $delimiter,
+                            'height' => $height / 2 - $delimiter,
                         ]
                     ],
                     3 => [
-                        'to' => [ 'x' => $width / 2, 'y' => $height / 2],
+                        'to' => [ 'x' => $width / 2 + $delimiter, 'y' => $height / 2 + $delimiter],
                         'size' => [
-                            'width' => $width / 2,
-                            'height' => $height / 2,
+                            'width' => $width / 2 - $delimiter,
+                            'height' => $height / 2 - $delimiter,
                         ]
                     ],
                 ];
